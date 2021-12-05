@@ -1,7 +1,7 @@
 # Activity
 - [Pré requisitos]()
 - [Introdução]()
-   - [O que é uma atividade?]()
+   - [O que é uma Activity?]()
        - [Toda tela é uma Activity?]()
        - [A definição mais precisa para uma Activity]()
 - [Pilha de atividades]()
@@ -39,11 +39,11 @@ Caso tenha o aplicativo do Instagram instalado no seu telefone, experimente abri
 - [Link 2](https://www.instagram.com/betrybe/)
 - [Link 3](https://www.instagram.com/p/CWMDqoyjf35/)
 
-Se você realizou o experimento proposto deve ter percebido que, apesar de nos 3 links o aplicativo aberto ter sido o mesmo (Instagram),
+Se você realizou o experimento proposto deve ter percebido que, apesar de, nos 3 links, o aplicativo aberto ter sido o mesmo (Instagram),
 foram abertas telas diferentes:
 
 <table>
-    <thead>
+    <thead align="center">
         <tr>
             <td>Primeiro Link</td>
             <td>Segundo Link</td>
@@ -60,6 +60,10 @@ foram abertas telas diferentes:
 </table>
 
 Quando você clicou em um desses links pelo seu smartphone, o aplicativo que estava com o link fez uma solicitação para inicializar uma atividade do Instagram.
+
 Faça mais um experimento:
 Caso o Instagram ainda esteja aberto, feche-o e abra novamente o terceiro link, após isso pressione o botão voltar do sistema:
 Você vai perceber que, diferentemente do que ocorre em um navegador, o botão de voltar, nesse caso irá voltar para o aplicativo anterior, em vez de voltar para uma outra tela do Instagram (o que seria esperado se estivesse pelo navegador).
+
+Com isso você consegue perceber que, diferentemente de um programa que foi projetado para executar em um sistema operacional desktop, um aplicativo nem sempre começa a experiência do usuário no mesmo lugar. Dizemos então, que a jornada do usuário começa de maneira não deterministica.
+A classe `Activity` foi então projetada para facilitar esse paradigma.

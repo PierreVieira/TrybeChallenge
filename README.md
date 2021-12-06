@@ -130,4 +130,4 @@ como, por exemplo, uma borboleta, que nasce, se desenvolve passando desde seu es
 
 _Imagem retirada do codelab da google sobre desenvolvimento Android_
 
-<img src="assets/lifecycle/butterfly_lifecycle.png" alt="Ciclo de vida de uma borboleta">
+<img width="400" src="assets/lifecycle/butterfly_lifecycle.png" alt="Ciclo de vida de uma borboleta">

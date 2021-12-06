@@ -1,12 +1,17 @@
+Todo material aqui disposto **não referenciado**, incluido vídeos, códigos de exemplos no github e imagens são de autoria de [Pierre Vieira](https://github.com/PierreVieira).
+
 # Activity
+
+A ideia deste capítulo é lhe introduzir à classe Activity do Android seguindo o seguinte roteiro:
+
 - [Pré requisitos]()
 - [Introdução]()
    - [O que é uma Activity?]()
        - [Toda tela é uma Activity?]()
        - [A definição mais precisa para uma Activity]()
 - [Pilha de navegação]()
-- [Ciclo de vida]()
-- [Recuperando estado]()
+- [Ciclo de vida de uma Activity]()
+- [Recuperando estado de uma Activity]()
 - [Exercícios]()
 
 ## Pré Requisitos
@@ -58,9 +63,9 @@ foram abertas telas diferentes:
     </thead>
     <tbody>
         <tr>
-            <td><img width="280" src="assets/home_instagram.jpg" alt="Primeiro link"></td>
-            <td><img width="280" src="assets/trybe_profile.jpg" alt="Segundo link"></td>
-            <td><img width="280" src="assets/trybe_post.jpg" alt="Terceiro link"></td>
+            <td><img width="280" src="assets/introduction/home_instagram.jpg" alt="Primeiro link"></td>
+            <td><img width="280" src="assets/introduction/trybe_profile.jpg" alt="Segundo link"></td>
+            <td><img width="280" src="assets/introduction/trybe_post.jpg" alt="Terceiro link"></td>
         </tr>
     </tbody>
 </table>
@@ -82,8 +87,47 @@ uma definição que está caindo em desuso, vamos considerar essa definição pa
 abordagem para fazer navegação. Ainda que um aplicativo não use mais esse paradigma, entender como funciona uma pilha de navegação
 é algo essencial para qualquer desenvolvedor android, e isso podemos estudar com atividades 😉
 
-Então, considerando no nosso exemplo em que cada tela é representada por uma atividade diferente, veja o seguinte vídeo:
+Então, considerando no nosso exemplo, em que cada tela é representada por uma atividade diferente, veja o seguinte vídeo:
 
 https://user-images.githubusercontent.com/49538805/144770412-d32e5fa3-10bd-445b-9cf1-4912f3290df6.mp4
 
+Você percebe que isso é apenas um simples app que navega entre 3 telas (no nosso caso também pode ser entendido como 3 activities),
+mas que tal entender como isso realmente funciona por debaixo dos panos? 🤔
 
+Nesse caso o sistema Android utiliza uma estrutura de dados chamada pilha para controlar a navegação.
+O foco desse capítulo não é explorar o funcionamento e a implementação de uma [pilha](https://pt.wikipedia.org/wiki/Pilha_(inform%C3%A1tica)), mas podemos resumir uma pilha como
+uma estrutura em que o primeiro elemento a ser inserido será o último a ser removido.
+
+> Pense em uma pilha de pratos, geralmente o primeiro prato a ser removido dessa pilha é o último prato que foi inserido.
+
+No nosso exemplo podemos pensar em uma representação gráfica com algo do tipo:
+
+Ao inicializar o aplicativo temos somente 1 atividade na pilha:
+
+![pilha com 1 atividade](assets/navigation/pilha_com_1_atividade.png)
+
+Ao navegar da primeira atividade para a segunda atividade, colocamos mais um item na pilha:
+
+![pilha com 2 atividades](assets/navigation/pilha_com_2_atividades.png)
+
+Ao navegar da segunda atividade para a terceira atividade, estamos colocando mais um item na pilha:
+
+![pilha com 3 atividades](assets/navigation/pilha_com_3_atividades.png)
+
+Quando pressionamos o botão de voltar estamos removendo a atividade do topo da pilha
+
+![img.png](assets/navigation/removendo_da_pilha.png)
+
+Nesse caso voltamos a ter uma pilha com 2 atividades:
+
+![pilha com 2 atividades](assets/navigation/pilha_com_2_atividades.png)
+
+E assim podemos ir navegando pelo app que o sistema Android irá manipular a navegação através das pilhas.
+
+## Ciclo de Vida
+Toda atividade tem aquilo que chamamos de _ciclo de vida_. Essa é uma alusão aos ciclos de vida de animais e vegetais,
+como, por exemplo, uma borboleta, que nasce, se desenvolve passando desde seu estado embrionário até a vida adulta e depois morre.
+
+_Imagem retirada do codelab da google sobre desenvolvimento Android_
+
+<img src="assets/lifecycle/butterfly_lifecycle.png" alt="Ciclo de vida de uma borboleta">

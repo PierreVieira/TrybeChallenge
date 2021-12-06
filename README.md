@@ -4,7 +4,7 @@
    - [O que é uma Activity?]()
        - [Toda tela é uma Activity?]()
        - [A definição mais precisa para uma Activity]()
-- [Pilha de atividades]()
+- [Pilha de navegação]()
 - [Ciclo de vida]()
 - [Recuperando estado]()
 - [Exercícios]()
@@ -27,7 +27,7 @@ começaram a ser mais discutidos pela comunidade Android. Esse modelo de defini�
 Em que as telas, não são mais definidas por activities, mas sim por fragmentos (plural traduzido de Fragment).
 
 Nessa parte do curso não daremos muito foco aos fragmentos e nem no componente de navegação do Jetpack, mas caso queira entender melhor o
-assunto, após estudar esse capítulo, recomendamos [esse vídeo](https://youtu.be/2k8x8V77CrU) referente ao Android Dev Summit '18, onde esse tema foi mais discutido.
+assunto, após estudar esse capítulo, recomendamos [esse vídeo](https://youtu.be/2k8x8V77CrU) referente ao Android Dev Summit '18, onde esse tema foi mais abordado pela Google.
 
 ### A definição mais precisa para uma Activity
 Após essa série de considerações podemos finalmente definir o que é uma acitvity: uma atividade (ou activity) é o ponto de entrada para a interação de um aplicativo com o usuário.
@@ -39,15 +39,21 @@ Caso tenha o aplicativo do Instagram instalado no seu telefone, experimente abri
 - [Link 2](https://www.instagram.com/betrybe/)
 - [Link 3](https://www.instagram.com/p/CWMDqoyjf35/)
 
+
+> Dica: Se o link estiver abrindo diretamente no seu navegador sem te perguntar se você quer abrir diretamente no Instagram
+> copie os links e cole um por um em algum editor de texto no seu celular (pode ser um chat qualquer do whatsapp),
+> tente clicar novamente no link: agora ele provavelmente irá perguntar por onde você quer abrir o app, escolha o Instagram. 
+
+
 Se você realizou o experimento proposto deve ter percebido que, apesar de, nos 3 links, o aplicativo aberto ter sido o mesmo (Instagram),
 foram abertas telas diferentes:
 
 <table>
     <thead align="center">
         <tr>
-            <td>Primeiro Link</td>
-            <td>Segundo Link</td>
-            <td>Terceiro Link</td>
+            <td><strong>Primeiro Link</strong></td>
+            <td><strong>Segundo Link</strong></td>
+            <td><strong>Terceiro Link</strong></td>
         </tr>
     </thead>
     <tbody>
@@ -66,4 +72,14 @@ Caso o Instagram ainda esteja aberto, feche-o e abra novamente o terceiro link, 
 Você vai perceber que, diferentemente do que ocorre em um navegador, o botão de voltar, nesse caso irá voltar para o aplicativo anterior, em vez de voltar para uma outra tela do Instagram (o que seria esperado se estivesse pelo navegador).
 
 Com isso você consegue perceber que, diferentemente de um programa que foi projetado para executar em um sistema operacional desktop, um aplicativo nem sempre começa a experiência do usuário no mesmo lugar. Dizemos então, que a jornada do usuário começa de maneira não deterministica.
-A classe `Activity` foi então projetada para facilitar esse paradigma.
+A classe `Activity` foi, dessa forma, projetada para facilitar esse paradigma.
+
+**OBS:** Veremos em capítulos posteriores, durante o curso, como funciona internamente esse pedido de um app pedir para inicializar atividades de outros apps com os chamados _intents_, mas por enquanto atente-se apenas no fato de que isso é possível e que a atividade representa o início dessa chamada.
+
+## Pilha de Atividades
+Apesar de, no item anterior, termos falado que definir uma atividade simplesmente dizendo que "representa uma tela" é
+uma definição que está caindo em desuso, vamos considerar essa definição para esse item, pois muitos apps ainda utilizam essa
+abordagem para fazer navegação. Ainda que um aplicativo não use mais esse paradigma, entender como funciona uma pilha de navegação
+é algo essencial para qualquer desenvolvedor android, e isso podemos estudar com atividades 😉
+
+Então, considerando no nosso exemplo em que cada tela é representada por uma atividade diferente, veja o seguinte vídeo:

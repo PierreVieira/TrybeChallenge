@@ -83,3 +83,7 @@ abordagem para fazer navegação. Ainda que um aplicativo não use mais esse par
 é algo essencial para qualquer desenvolvedor android, e isso podemos estudar com atividades 😉
 
 Então, considerando no nosso exemplo em que cada tela é representada por uma atividade diferente, veja o seguinte vídeo:
+
+https://user-images.githubusercontent.com/49538805/144770412-d32e5fa3-10bd-445b-9cf1-4912f3290df6.mp4
+
+
